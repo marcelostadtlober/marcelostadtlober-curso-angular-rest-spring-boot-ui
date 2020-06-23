@@ -8,6 +8,7 @@ import { ToastyModule } from 'ng2-toasty';
 import { ErrorHandlerService } from './error-handler.service';
 import { PessoaService } from 'app/pessoas/pessoa.service';
 import { LancamentoService } from 'app/lancamentos/lancamento.service';
+import { CategoriaService } from 'app/categorias/categoria.service';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   providers: [
     LancamentoService,
     PessoaService,
+    CategoriaService,
     ConfirmationService,
     { provide: LOCALE_ID, useValue: 'pt-BR'},
     ErrorHandlerService
