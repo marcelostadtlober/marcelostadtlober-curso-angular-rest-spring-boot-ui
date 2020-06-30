@@ -82,7 +82,7 @@ export class LancamentoCadastroComponent implements OnInit {
   atualizarLancamento(form: FormControl) {
     this.lancamentoService.atualizar(this.lancamento)
     .then(lancamento => {
-      this.lancamento = this.lancamento;
+      this.lancamento = lancamento;
 
       this.toasty.success('Lançamento alterado com sucesso!')
     })
@@ -112,7 +112,7 @@ export class LancamentoCadastroComponent implements OnInit {
       this.lancamento = new Lancamento();
     }.bind(this), 1);
 
-    this.router.navigate(['/lancamento/novo']);
+    this.router.navigate(['/lancamentos/novo']);
   }
 
 }
