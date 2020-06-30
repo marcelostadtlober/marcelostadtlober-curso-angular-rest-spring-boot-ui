@@ -86,13 +86,13 @@ export class LancamentoCadastroComponent implements OnInit {
 
   atualizarLancamento(form: FormControl) {
     this.lancamentoService.atualizar(this.lancamento)
-    .then(lancamento => {
-      this.lancamento = lancamento;
+      .then(lancamento => {
+        this.lancamento = lancamento;
 
-      this.toasty.success('Lançamento alterado com sucesso!')
-      this.atualizarTituloEdicao();
-    })
-    .catch(erro => this.errorHandler.handle(erro));
+        this.toasty.success('Lançamento alterado com sucesso!');
+        this.atualizarTituloEdicao();
+      })
+      .catch(erro => this.errorHandler.handle(erro));
   }
 
   carregarCategorias() {
